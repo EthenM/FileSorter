@@ -1,0 +1,9 @@
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/CMakeFiles/FileSorter.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/CMakeFiles/package.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/CMakeFiles/package_source.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/CMakeFiles/edit_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/CMakeFiles/rebuild_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/package.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/package_source.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/edit_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/rebuild_cache.dir
