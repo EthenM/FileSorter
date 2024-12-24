@@ -148,6 +148,78 @@ FileSorter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/build
 .PHONY : FileSorter/fast
 
+src/FileObtainer.obj: src/FileObtainer.cpp.obj
+.PHONY : src/FileObtainer.obj
+
+# target to build an object file
+src/FileObtainer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj
+.PHONY : src/FileObtainer.cpp.obj
+
+src/FileObtainer.i: src/FileObtainer.cpp.i
+.PHONY : src/FileObtainer.i
+
+# target to preprocess a source file
+src/FileObtainer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.i
+.PHONY : src/FileObtainer.cpp.i
+
+src/FileObtainer.s: src/FileObtainer.cpp.s
+.PHONY : src/FileObtainer.s
+
+# target to generate assembly for a file
+src/FileObtainer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.s
+.PHONY : src/FileObtainer.cpp.s
+
+src/FileSorter.obj: src/FileSorter.cpp.obj
+.PHONY : src/FileSorter.obj
+
+# target to build an object file
+src/FileSorter.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj
+.PHONY : src/FileSorter.cpp.obj
+
+src/FileSorter.i: src/FileSorter.cpp.i
+.PHONY : src/FileSorter.i
+
+# target to preprocess a source file
+src/FileSorter.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileSorter.cpp.i
+.PHONY : src/FileSorter.cpp.i
+
+src/FileSorter.s: src/FileSorter.cpp.s
+.PHONY : src/FileSorter.s
+
+# target to generate assembly for a file
+src/FileSorter.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileSorter.cpp.s
+.PHONY : src/FileSorter.cpp.s
+
+src/exceptions/DirectoryNotFoundException.obj: src/exceptions/DirectoryNotFoundException.cpp.obj
+.PHONY : src/exceptions/DirectoryNotFoundException.obj
+
+# target to build an object file
+src/exceptions/DirectoryNotFoundException.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj
+.PHONY : src/exceptions/DirectoryNotFoundException.cpp.obj
+
+src/exceptions/DirectoryNotFoundException.i: src/exceptions/DirectoryNotFoundException.cpp.i
+.PHONY : src/exceptions/DirectoryNotFoundException.i
+
+# target to preprocess a source file
+src/exceptions/DirectoryNotFoundException.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.i
+.PHONY : src/exceptions/DirectoryNotFoundException.cpp.i
+
+src/exceptions/DirectoryNotFoundException.s: src/exceptions/DirectoryNotFoundException.cpp.s
+.PHONY : src/exceptions/DirectoryNotFoundException.s
+
+# target to generate assembly for a file
+src/exceptions/DirectoryNotFoundException.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.s
+.PHONY : src/exceptions/DirectoryNotFoundException.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -183,6 +255,15 @@ help:
 	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... FileSorter
+	@echo ... src/FileObtainer.obj
+	@echo ... src/FileObtainer.i
+	@echo ... src/FileObtainer.s
+	@echo ... src/FileSorter.obj
+	@echo ... src/FileSorter.i
+	@echo ... src/FileSorter.s
+	@echo ... src/exceptions/DirectoryNotFoundException.obj
+	@echo ... src/exceptions/DirectoryNotFoundException.i
+	@echo ... src/exceptions/DirectoryNotFoundException.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s

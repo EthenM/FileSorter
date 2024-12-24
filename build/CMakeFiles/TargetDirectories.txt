@@ -7,3 +7,15 @@ C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMake
 C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/package_source.dir
 C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/edit_cache.dir
 C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/CMakeFiles/rebuild_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/exceptions/CMakeFiles/package.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/exceptions/CMakeFiles/package_source.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/exceptions/CMakeFiles/edit_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/exceptions/CMakeFiles/rebuild_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/CMakeFiles/package.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/CMakeFiles/package_source.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/CMakeFiles/edit_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/CMakeFiles/rebuild_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/exif/src/CMakeFiles/package.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/exif/src/CMakeFiles/package_source.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/exif/src/CMakeFiles/edit_cache.dir
+C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/exif/src/CMakeFiles/rebuild_cache.dir

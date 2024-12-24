@@ -64,40 +64,101 @@ CMAKE_BINARY_DIR = C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSor
 # The main recursive "all" target.
 all: CMakeFiles/FileSorter.dir/all
 all: src/all
+all: external/all
 .PHONY : all
 
 # The main recursive "codegen" target.
 codegen: CMakeFiles/FileSorter.dir/codegen
 codegen: src/codegen
+codegen: external/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
 preinstall: src/preinstall
+preinstall: external/preinstall
 .PHONY : preinstall
 
 # The main recursive "clean" target.
 clean: CMakeFiles/FileSorter.dir/clean
 clean: src/clean
+clean: external/clean
 .PHONY : clean
+
+#=============================================================================
+# Directory level rules for directory external
+
+# Recursive "all" directory target.
+external/all: external/exif/src/all
+.PHONY : external/all
+
+# Recursive "codegen" directory target.
+external/codegen: external/exif/src/codegen
+.PHONY : external/codegen
+
+# Recursive "preinstall" directory target.
+external/preinstall: external/exif/src/preinstall
+.PHONY : external/preinstall
+
+# Recursive "clean" directory target.
+external/clean: external/exif/src/clean
+.PHONY : external/clean
+
+#=============================================================================
+# Directory level rules for directory external/exif/src
+
+# Recursive "all" directory target.
+external/exif/src/all:
+.PHONY : external/exif/src/all
+
+# Recursive "codegen" directory target.
+external/exif/src/codegen:
+.PHONY : external/exif/src/codegen
+
+# Recursive "preinstall" directory target.
+external/exif/src/preinstall:
+.PHONY : external/exif/src/preinstall
+
+# Recursive "clean" directory target.
+external/exif/src/clean:
+.PHONY : external/exif/src/clean
 
 #=============================================================================
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all:
+src/all: src/exceptions/all
 .PHONY : src/all
 
 # Recursive "codegen" directory target.
-src/codegen:
+src/codegen: src/exceptions/codegen
 .PHONY : src/codegen
 
 # Recursive "preinstall" directory target.
-src/preinstall:
+src/preinstall: src/exceptions/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean:
+src/clean: src/exceptions/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/exceptions
+
+# Recursive "all" directory target.
+src/exceptions/all:
+.PHONY : src/exceptions/all
+
+# Recursive "codegen" directory target.
+src/exceptions/codegen:
+.PHONY : src/exceptions/codegen
+
+# Recursive "preinstall" directory target.
+src/exceptions/preinstall:
+.PHONY : src/exceptions/preinstall
+
+# Recursive "clean" directory target.
+src/exceptions/clean:
+.PHONY : src/exceptions/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/FileSorter.dir
@@ -106,12 +167,12 @@ src/clean:
 CMakeFiles/FileSorter.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=1,2 "Built target FileSorter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target FileSorter"
 .PHONY : CMakeFiles/FileSorter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileSorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FileSorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 0
 .PHONY : CMakeFiles/FileSorter.dir/rule

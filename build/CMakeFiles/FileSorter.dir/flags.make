@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = 
 
-CXX_FLAGS = -static-libstdc++ -static-libgcc
+CXX_FLAGS = 
 

@@ -1,4 +1,10 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj"
+  "CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj.d"
+  "CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj"
+  "CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj.d"
+  "CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj"
+  "CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj.d"
   "CMakeFiles/FileSorter.dir/src/main.cpp.obj"
   "CMakeFiles/FileSorter.dir/src/main.cpp.obj.d"
   "FileSorter.exe"

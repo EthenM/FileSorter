@@ -71,10 +71,24 @@ include CMakeFiles/FileSorter.dir/flags.make
 CMakeFiles/FileSorter.dir/codegen:
 .PHONY : CMakeFiles/FileSorter.dir/codegen
 
+CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj: CMakeFiles/FileSorter.dir/flags.make
+CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/exceptions/DirectoryNotFoundException.cpp
+CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj: CMakeFiles/FileSorter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj -MF CMakeFiles\FileSorter.dir\src\exceptions\DirectoryNotFoundException.cpp.obj.d -o CMakeFiles\FileSorter.dir\src\exceptions\DirectoryNotFoundException.cpp.obj -c C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\exceptions\DirectoryNotFoundException.cpp
+
+CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\exceptions\DirectoryNotFoundException.cpp > CMakeFiles\FileSorter.dir\src\exceptions\DirectoryNotFoundException.cpp.i
+
+CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\exceptions\DirectoryNotFoundException.cpp -o CMakeFiles\FileSorter.dir\src\exceptions\DirectoryNotFoundException.cpp.s
+
 CMakeFiles/FileSorter.dir/src/main.cpp.obj: CMakeFiles/FileSorter.dir/flags.make
 CMakeFiles/FileSorter.dir/src/main.cpp.obj: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/main.cpp
 CMakeFiles/FileSorter.dir/src/main.cpp.obj: CMakeFiles/FileSorter.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/FileSorter.dir/src/main.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/FileSorter.dir/src/main.cpp.obj"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileSorter.dir/src/main.cpp.obj -MF CMakeFiles\FileSorter.dir\src\main.cpp.obj.d -o CMakeFiles\FileSorter.dir\src\main.cpp.obj -c C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\main.cpp
 
 CMakeFiles/FileSorter.dir/src/main.cpp.i: cmake_force
@@ -85,19 +99,53 @@ CMakeFiles/FileSorter.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileSorter.dir/src/main.cpp.s"
 	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\main.cpp -o CMakeFiles\FileSorter.dir\src\main.cpp.s
 
+CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj: CMakeFiles/FileSorter.dir/flags.make
+CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/FileSorter.cpp
+CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj: CMakeFiles/FileSorter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj -MF CMakeFiles\FileSorter.dir\src\FileSorter.cpp.obj.d -o CMakeFiles\FileSorter.dir\src\FileSorter.cpp.obj -c C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileSorter.cpp
+
+CMakeFiles/FileSorter.dir/src/FileSorter.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileSorter.dir/src/FileSorter.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileSorter.cpp > CMakeFiles\FileSorter.dir\src\FileSorter.cpp.i
+
+CMakeFiles/FileSorter.dir/src/FileSorter.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileSorter.dir/src/FileSorter.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileSorter.cpp -o CMakeFiles\FileSorter.dir\src\FileSorter.cpp.s
+
+CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj: CMakeFiles/FileSorter.dir/flags.make
+CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/FileObtainer.cpp
+CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj: CMakeFiles/FileSorter.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj -MF CMakeFiles\FileSorter.dir\src\FileObtainer.cpp.obj.d -o CMakeFiles\FileSorter.dir\src\FileObtainer.cpp.obj -c C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileObtainer.cpp
+
+CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.i"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileObtainer.cpp > CMakeFiles\FileSorter.dir\src\FileObtainer.cpp.i
+
+CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.s"
+	C:\msys64\mingw64\bin\c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\src\FileObtainer.cpp -o CMakeFiles\FileSorter.dir\src\FileObtainer.cpp.s
+
 # Object files for target FileSorter
 FileSorter_OBJECTS = \
-"CMakeFiles/FileSorter.dir/src/main.cpp.obj"
+"CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj" \
+"CMakeFiles/FileSorter.dir/src/main.cpp.obj" \
+"CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj" \
+"CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj"
 
 # External object files for target FileSorter
 FileSorter_EXTERNAL_OBJECTS =
 
+FileSorter.exe: CMakeFiles/FileSorter.dir/src/exceptions/DirectoryNotFoundException.cpp.obj
 FileSorter.exe: CMakeFiles/FileSorter.dir/src/main.cpp.obj
+FileSorter.exe: CMakeFiles/FileSorter.dir/src/FileSorter.cpp.obj
+FileSorter.exe: CMakeFiles/FileSorter.dir/src/FileObtainer.cpp.obj
 FileSorter.exe: CMakeFiles/FileSorter.dir/build.make
 FileSorter.exe: CMakeFiles/FileSorter.dir/linkLibs.rsp
 FileSorter.exe: CMakeFiles/FileSorter.dir/objects1.rsp
 FileSorter.exe: CMakeFiles/FileSorter.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable FileSorter.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable FileSorter.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\FileSorter.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
