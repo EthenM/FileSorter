@@ -13,6 +13,12 @@ namespace FileSorterProgram {
     public:
 
         /**
+         * @brief Construct a new File Obtainer object
+         * 
+         */
+        FileObtainer();
+
+        /**
          * @brief Construct a new File Obtainer object, with the root path given.
          * 
          * @param root The root path to get files from

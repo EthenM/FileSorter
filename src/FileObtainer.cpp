@@ -8,6 +8,10 @@
 
 namespace FileSorterProgram {
 
+    FileObtainer::FileObtainer() {
+        this->root = "";
+    }
+
     FileObtainer::FileObtainer(std::string root) {
         if (!std::filesystem::exists(root) && !std::filesystem::is_directory(root)) {
             //root path passed in was not a directory that exists. throw an error, and alert the user
@@ -22,7 +26,14 @@ namespace FileSorterProgram {
     }
 
     std::vector<std::string> FileObtainer::getFilesNotRecursive() {
-        //the aim for this is to pull out all of the files in a given directory and add them to the list
+        
+        //ensure the root path is good
+        if (!std::filesystem::exists(this->root) && !std::filesystem::is_directory(this->root)) {
+            throw new Exceptions::DirectoryNotFoundException(root);
+        }
+        
+        //the aim for this is to pull out all of the files in a given directory and add them to the
+        //list
         std::vector<std::string> filesFound;
 
         std::stack<std::string> directoriesToSearch;

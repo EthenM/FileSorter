@@ -1,4 +1,5 @@
 #include <iostream>
+#include "../include/FileSorter.hpp"
 
 /**
  * FileSorter:
@@ -16,8 +17,14 @@
  */
 
 /** */
-int main() {
-    std::cout << "Hello World!" << std::endl;
+int main(int argc, char* argv[]) {
 
-    return 0;
+    std::cout << "Running program on root: " << argv[1] << std::endl;
+
+    //pass in the second argument. the first is the path to the command. The second will be the
+    //root path.
+    FileSorterProgram::FileSorter fs { std::string(argv[1]) };
+    int success { fs.run() };
+
+    return success;
 }
