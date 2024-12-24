@@ -131,14 +131,6 @@ namespace FileSorterProgram {
         int sortFiles(std::vector<std::string>* files);
 
         /**
-         * @brief Get the Creation Time of a given file
-         * 
-         * @param file The file to get creation time from
-         * @return FILETIME The creation time of the file
-         */
-        std::tuple<int, int> getCreationTime(std::string file);
-
-        /**
          * @brief Tests to see if the filename already exists. if it does, it appends a number to
          * the end of the file name, and tries again
          * 
