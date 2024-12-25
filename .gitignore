@@ -2,7 +2,7 @@
 *.d
 
 # No need to track the build directory
-
+/build/
 
 # Compiled Object files
 *.slo
