@@ -5,7 +5,7 @@
 #include "../Enums.hpp"
 
 namespace FileSorterProgram::PathBuilders {
-    class JPGBuilder : PathBuilder {    
+    class JPGBuilder : public PathBuilder {    
     private:
         /**
          * @brief The directory to store the sorted files in

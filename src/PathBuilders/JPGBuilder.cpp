@@ -31,26 +31,40 @@ namespace FileSorterProgram::PathBuilders {
         if (year + month == -2) {
             std::cerr << "An error occured while trying to open the file " << file << " "
                 << GetLastError() << std::endl;
-            return;
+            return "";
         }
+
 
         //build the directory that this file will be sorted into
+        std::string dirPath = "";
         
-        //build the year. it will always be there.
-        std::string dirPath = (std::filesystem::path(this->sortedDir) /
-            std::filesystem::path(std::to_string(year))).string();
+        if (year + month == -4) {
+            //no date stored, store this in an unsortable path.
+            dirPath = (std::filesystem::path(this->sortedDir) /
+                std::filesystem::path(utilities::Helper::UNSORTABLE_DIR))
+                .string();
 
-        //create the year directory if it doesn't already exist
-        utilities::Helper::createDirectoryIfNotExists(dirPath);
-
-        //if the month is needed, add the month
-        if (sortType == SortType::Month) {
-            dirPath = (std::filesystem::path(dirPath) / std::filesystem::path(
-                utilities::Helper::getMonthString(static_cast<Months>(month)))).string();
-
-            //create the month directory if it doesn't already exist
+            //finally create the unsortable if it doesn't exist
             utilities::Helper::createDirectoryIfNotExists(dirPath);
+        } else {
+            //build the year. it will always be there.
+            dirPath = (std::filesystem::path(this->sortedDir) /
+                std::filesystem::path(std::to_string(year))).string();
+
+            //create the year directory if it doesn't already exist
+            utilities::Helper::createDirectoryIfNotExists(dirPath);
+
+            //if the month is needed, add the month
+            if (sortType == SortType::Month) {
+                dirPath = (std::filesystem::path(dirPath) / std::filesystem::path(
+                    utilities::Helper::getMonthString(static_cast<Months>(month)))).string();
+
+                //create the month directory if it doesn't already exist
+                utilities::Helper::createDirectoryIfNotExists(dirPath);
+            }
         }
+
+        
 
 
         //return the build path.
@@ -107,15 +121,21 @@ namespace FileSorterProgram::PathBuilders {
         //lastly, return the year and month the photo was taken.
         std::stringstream dateString(result.DateTimeOriginal);
         int year, month;
-        std::string delimiter;
+        char colon;
         
+        if (result.DateTimeOriginal.length() == 0) {
+            //there is no date stored
+            return std::make_tuple(-2, -2);
+        }
+
         //parse the date string to the variables declared above
-        dateString >> year >> delimiter >> month >> delimiter;
+        dateString >> year >> colon >> month;
 
         //if the parse worked, return the year and month. if not, return -1.
-        if (dateString && delimiter == ":") {
+        if (dateString && colon == ':') {
             return std::make_tuple(year, month);
         } else {
+            std::cerr << "ERROR: could not extract year and month from file " << file << std::endl;
             return std::make_tuple(-1, -1);
         }
     }

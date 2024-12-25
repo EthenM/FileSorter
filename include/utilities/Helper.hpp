@@ -11,6 +11,9 @@ namespace FileSorterProgram::utilities {
      */
     class Helper {
     public:
+        const static std::string UNSORTABLE_DIR;
+    
+    public:
         /**
          * @brief Construct a new Helper object
          */

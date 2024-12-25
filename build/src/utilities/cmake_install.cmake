@@ -1,4 +1,4 @@
-# Install script for directory: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/external/exif/src
+# Install script for directory: C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/utilities
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,6 +40,6 @@ endif()
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/external/exif/src/install_local_manifest.txt"
+  file(WRITE "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/build/src/utilities/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()

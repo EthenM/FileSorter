@@ -5,13 +5,29 @@
 #include <vector>
 #include <tuple>
 #include <string>
+#include <regex>
 #include <windows.h>
 
 namespace FileSorterProgram {
 
     class FileSorter {
     public:
+        /**
+         * @brief Part of the name of the sorted directory. The first part is the name of the root
+         * chosen by the user. this is then appended to the end, along with an underscore.
+         */
         const std::string SORTED_DIR = "sorted";
+
+        /**
+         * @brief A regex pattern for grouping different file formats for building the path to the
+         * needed sorted file.
+         * 
+         * @paragraph png files don't have a standard way of storing dates, so they are in their own
+         * category. jpgs have a standard way of storing dates, so they are handled separately.
+         * video files don't have a standard way of storing dates either, so they are all handled
+         * together, similarly to how pngs are handled.
+         */
+        const std::string EXTENSION_PATTERN = "(png)|(jpg|jpeg)|(mov|mp4|gif)";
 
     //FIELDS
     private:
@@ -35,7 +51,7 @@ namespace FileSorterProgram {
          * @brief Whether to move the files or copy the files. copying is the safer route, but
          * temporarily takes up more space
          */
-        TransferType transerType;
+        TransferType transferType;
 
         
     //CONSTRUCTORS

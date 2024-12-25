@@ -4,10 +4,7 @@
 #include <string>
 
 namespace FileSorterProgram::PathBuilders {
-    class PNGBuilder : PathBuilder {   
-    public:
-        const std::string PNG_DIR = "PNG";
-        
+    class PNGBuilder : public PathBuilder {        
     private:
         /**
          * @brief The directory to store the sorted files in
@@ -29,6 +26,6 @@ namespace FileSorterProgram::PathBuilders {
         ~PNGBuilder();
 
     public:
-        std::string buildPath(std::string file);
+        std::string buildPath(std::string file, SortType sortType);
     };
 }

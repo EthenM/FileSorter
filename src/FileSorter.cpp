@@ -4,11 +4,15 @@
 #include "../include/Enums.hpp"
 #include "../include/utilities/Helper.hpp"
 #include "../include/PathBuilders/PathBuilder.hpp"
+#include "../include/PathBuilders/VideoBuilder.hpp"
+#include "../include/PathBuilders/JPGBuilder.hpp"
+#include "../include/PathBuilders/PNGBuilder.hpp"
 #include "exceptions/DirectoryNotFoundException.cpp"
 #include <iostream>
 #include <vector>
 #include <tuple>
 #include <string>
+#include <regex>
 #include <filesystem>
 #include <windows.h>
 
@@ -45,9 +49,15 @@ namespace FileSorterProgram {
         std::vector<std::string> files { obtainer.getFilesNotRecursive() };
 
         //take the list of files and sort them.
-        int success { this->sortFiles(&files) };
+        try {
+            int success { this->sortFiles(&files) };
 
-        return success;
+            return success;
+        } catch (const std::exception& ex) {
+            std::cout << "An error occured while program execution"
+                << ex.what() << std::endl;
+            return 1;
+        }
     }
 
     #pragma region initProgramDetails
@@ -80,7 +90,10 @@ namespace FileSorterProgram {
         //add the two values to the fields in the object
         this->root = rootPath;
         this->sortType = sortType;
-        this->transerType = transerType;
+        this->transferType = transferType;
+
+        //lastly, get the sorted Directory name
+        this->getSortedDirName();
     }
 
     void FileSorter::getSortedDirName() {
@@ -221,24 +234,92 @@ namespace FileSorterProgram {
 
         //check if the sorted folder is already created in the 
 
+        std::cout << files->size() << std::endl;
+        int filesMovedOrCopied = 0;
+        int errorsFound = 0;
+
         for (int i = 0; i < files->size(); i++) {
             std::string file { (*files)[i] };
 
             //check if the file exists and it is not a directory
             if (std::filesystem::exists(file) && !std::filesystem::is_directory(file)) {
                 
+
                 //build the dir path, depending on the extension of the file.
                 std::string dirPath { "" };
 
                 //run the extension of the file on a regex function, to get the path builder needed
-                PathBuilders::PathBuilder* pathBuilder;
+                PathBuilders::PathBuilder* pathBuilder = nullptr;
 
                 //here, determine the type of PathBuilder needed.
+                std::regex extension(EXTENSION_PATTERN, std::regex::icase);
 
-                dirPath = pathBuilder->buildPath(file, this->sortType);
+                std::string extensionString = std::filesystem::path(file)
+                    .extension().string();
 
-                //here, move or copy the file to the dirPath
+                std::smatch match;
+                if (std::regex_search(extensionString, match, extension)) {
+                    
+                    //find the group that was matched
+                    for (size_t i = 1; i < match.size(); i++) {
+
+                        //check if the current match was the one
+                        if (match[i].matched) {
+
+                            //convert the matched count to the enum
+                            ExtensionMatch matched = 
+                                static_cast<ExtensionMatch>(i);
+
+                            //the match was a success, figure out which it was
+                            switch (matched) {
+                            case ExtensionMatch::PNG:
+                                pathBuilder = new PathBuilders::
+                                    PNGBuilder(this->sortedDirName);
+                                break;
+                            case ExtensionMatch::JPG:
+                                pathBuilder = new PathBuilders::
+                                    JPGBuilder(this->sortedDirName);
+                                break;
+                            case ExtensionMatch::Video:
+                                pathBuilder = new PathBuilders::
+                                    VideoBuilder(this->sortedDirName);
+                                break;
+                            default:
+                                std::cout << extensionString
+                                    << " is not a valid file format";
+                                    errorsFound++;
+                                //move on to the next file. this one
+                                //was an invalid format.
+                                continue;
+                            }
+
+                            //if the pathBuilder has been initialized,
+                            //then break out of the loop.
+                            if (pathBuilder != nullptr) {
+                                break;
+                            }
+
+                        }
+                    }
+                }
+
+                //build the path to the file.
+                //to prevent a segmentation fault, if pathBuilder isn't initialized, just defualt
+                //the dirPath to an empty string.
+                dirPath = pathBuilder == nullptr
+                    ? ""
+                    : pathBuilder->buildPath(file, this->sortType);
                 
+                //remove the pathBuilder. It is no longer needed
+                delete pathBuilder;
+
+                //this will capture either unwanted files, or a problem with building the
+                //dirPath in the pathBuilder.
+                if (dirPath == "") {
+                    errorsFound++;
+                    continue;
+                }
+
                 //add the filename to the path
                 std::filesystem::path filePath = file;
                 std::string fileName = filePath.filename().string();
@@ -250,35 +331,53 @@ namespace FileSorterProgram {
 
                 std::cout << dirPath << std::endl;
 
-                // switch (this->transerType) {
-                // case TransferType::Move:
+                switch (this->transferType) {
+                case TransferType::Move:
 
-                //     //attempt to move the file.
-                //     try {
-                //         std::filesystem::rename(file, dirPath);
-                //         std::cout << file + " Has been moved successfully!" << std::endl;
-                //     } catch (const std::filesystem::filesystem_error& ex) {
-                //         std::cerr << "Error moving file: " << ex.what() << std::endl;
-                //     }
+                    //attempt to move the file.
+                    try {
+                        std::filesystem::rename(file, dirPath);
+                        std::cout << file + " Has been moved successfully!" << std::endl;
+                        filesMovedOrCopied++; //keep track of the files moved
+                    } catch (const std::filesystem::filesystem_error& ex) {
+                        std::cerr << "Error moving file: " << ex.what() << std::endl;
+                        errorsFound++;
+                    }
 
-                //     break;
-                // case TransferType::Copy:
+                    break;
+                case TransferType::Copy:
                     
-                //     //attempt to copy the file.
-                //     try {
-                //         std::filesystem::copy(file, dirPath,
-                //             std::filesystem::copy_options::overwrite_existing);    
-                //         std::cout << file << " successfully copied to " + dirPath << std::endl;
-                //     } catch (const std::filesystem::filesystem_error& ex) {
-                //         std::cerr << "Error copying file: " << ex.what() << std::endl;
-                //     }
+                    //attempt to copy the file.
+                    try {
+                        std::filesystem::copy(file, dirPath,
+                            std::filesystem::copy_options::overwrite_existing);    
+                        std::cout << file << " successfully copied to " + dirPath << std::endl;
+                        filesMovedOrCopied++; //keep track of the files copied
+                    } catch (const std::filesystem::filesystem_error& ex) {
+                        std::cerr << "Error copying file: " << ex.what() << std::endl;
+                        errorsFound++;
+                    }
                     
-                //     break;
-                // }
+                    break;
+                default:
+                    //alert the user that the transfer type is invalid.
+                    std::cerr << static_cast<int>(this->transferType)
+                        << " is not a valid transfer type." << std::endl;
+                    break;
+                }
             }
         }
 
-        return 1;
+        std::cout << "\n\nFound " << files->size() << " files and " 
+            << (this->transferType == TransferType::Copy
+                ? "copied "
+                : "moved ")
+            << filesMovedOrCopied << "." << std::endl;
+
+        std::cout << "\n\nEncountered " << errorsFound << " errors during program execution.\n\n"
+            << std::endl;
+
+        return 0;
     }
 
     void FileSorter::getValidFileName(std::string &fileName) {
@@ -298,16 +397,15 @@ namespace FileSorterProgram {
         fileNameNoExtension += filePath.extension().string();
 
         //loop through, increasing the number appended by one, until a valid name is found.
-        while (std::filesystem::exists(fileNameNoExtension)) {
-            //increment the counter
-            i++;
+        while (std::filesystem::exists(filePath.parent_path() /
+            std::filesystem::path( fileNameNoExtension))) {
 
-            //rebuild the file name
+            //rebuild the file name with the number incremented by one.
             fileNameNoExtension = filePath.stem().string();
-            fileNameNoExtension += "_" + std::to_string(i);
+            fileNameNoExtension += "_" + std::to_string(++i);
             fileNameNoExtension += filePath.extension().string();
         }
 
-        fileName = filePath.parent_path().string() + "\\" + fileNameNoExtension;
+        fileName = (filePath.parent_path() / std::filesystem::path(fileNameNoExtension)).string();
     }
 }

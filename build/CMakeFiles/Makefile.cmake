@@ -50,7 +50,9 @@ set(CMAKE_MAKEFILE_DEPENDS
   "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/external/CMakeLists.txt"
   "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/external/exif/src/CMakeLists.txt"
   "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/CMakeLists.txt"
+  "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/PathBuilders/CMakeLists.txt"
   "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/exceptions/CMakeLists.txt"
+  "C:/Users/BobG5/Desktop/Utilities/Programming/projects/FileSorter/src/utilities/CMakeLists.txt"
   )
 
 # The corresponding makefile is:
@@ -66,6 +68,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/CMakeFiles/CMakeDirectoryInformation.cmake"
   "src/exceptions/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/PathBuilders/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "src/utilities/CMakeFiles/CMakeDirectoryInformation.cmake"
   "external/CMakeFiles/CMakeDirectoryInformation.cmake"
   "external/exif/src/CMakeFiles/CMakeDirectoryInformation.cmake"
   )

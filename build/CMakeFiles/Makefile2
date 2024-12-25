@@ -127,19 +127,46 @@ external/exif/src/clean:
 
 # Recursive "all" directory target.
 src/all: src/exceptions/all
+src/all: src/PathBuilders/all
+src/all: src/utilities/all
 .PHONY : src/all
 
 # Recursive "codegen" directory target.
 src/codegen: src/exceptions/codegen
+src/codegen: src/PathBuilders/codegen
+src/codegen: src/utilities/codegen
 .PHONY : src/codegen
 
 # Recursive "preinstall" directory target.
 src/preinstall: src/exceptions/preinstall
+src/preinstall: src/PathBuilders/preinstall
+src/preinstall: src/utilities/preinstall
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
 src/clean: src/exceptions/clean
+src/clean: src/PathBuilders/clean
+src/clean: src/utilities/clean
 .PHONY : src/clean
+
+#=============================================================================
+# Directory level rules for directory src/PathBuilders
+
+# Recursive "all" directory target.
+src/PathBuilders/all:
+.PHONY : src/PathBuilders/all
+
+# Recursive "codegen" directory target.
+src/PathBuilders/codegen:
+.PHONY : src/PathBuilders/codegen
+
+# Recursive "preinstall" directory target.
+src/PathBuilders/preinstall:
+.PHONY : src/PathBuilders/preinstall
+
+# Recursive "clean" directory target.
+src/PathBuilders/clean:
+.PHONY : src/PathBuilders/clean
 
 #=============================================================================
 # Directory level rules for directory src/exceptions
@@ -161,18 +188,37 @@ src/exceptions/clean:
 .PHONY : src/exceptions/clean
 
 #=============================================================================
+# Directory level rules for directory src/utilities
+
+# Recursive "all" directory target.
+src/utilities/all:
+.PHONY : src/utilities/all
+
+# Recursive "codegen" directory target.
+src/utilities/codegen:
+.PHONY : src/utilities/codegen
+
+# Recursive "preinstall" directory target.
+src/utilities/preinstall:
+.PHONY : src/utilities/preinstall
+
+# Recursive "clean" directory target.
+src/utilities/clean:
+.PHONY : src/utilities/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/FileSorter.dir
 
 # All Build rule for target.
 CMakeFiles/FileSorter.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=1,2,3,4,5 "Built target FileSorter"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target FileSorter"
 .PHONY : CMakeFiles/FileSorter.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/FileSorter.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/FileSorter.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\BobG5\Desktop\Utilities\Programming\projects\FileSorter\build\CMakeFiles 0
 .PHONY : CMakeFiles/FileSorter.dir/rule

@@ -23,9 +23,9 @@ endfunction()
 add_subdirectory(src)
 add_subdirectory(external)
 
-message("The source code files: " ${FILESSRCDIR})
+message("The source code files: " ${FILESSRCDIR} ${FILESEXTERNALDIR})
 
-add_executable(FileSorter ${FILESSRCDIR})
+add_executable(FileSorter ${FILESSRCDIR} ${FILESEXTERNALDIR})
 
 #add flags for static linking of libraries
 # Add flags for full static linking

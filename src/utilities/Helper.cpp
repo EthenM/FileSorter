@@ -5,6 +5,8 @@
 
 namespace FileSorterProgram::utilities {
 
+    const std::string Helper::UNSORTABLE_DIR = "Unsortable";
+
     Helper::Helper() {  }
     Helper::~Helper() {  }
 

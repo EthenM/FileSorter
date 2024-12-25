@@ -148,6 +148,30 @@ FileSorter/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/build
 .PHONY : FileSorter/fast
 
+external/exif/src/exif.obj: external/exif/src/exif.cpp.obj
+.PHONY : external/exif/src/exif.obj
+
+# target to build an object file
+external/exif/src/exif.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/external/exif/src/exif.cpp.obj
+.PHONY : external/exif/src/exif.cpp.obj
+
+external/exif/src/exif.i: external/exif/src/exif.cpp.i
+.PHONY : external/exif/src/exif.i
+
+# target to preprocess a source file
+external/exif/src/exif.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/external/exif/src/exif.cpp.i
+.PHONY : external/exif/src/exif.cpp.i
+
+external/exif/src/exif.s: external/exif/src/exif.cpp.s
+.PHONY : external/exif/src/exif.s
+
+# target to generate assembly for a file
+external/exif/src/exif.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/external/exif/src/exif.cpp.s
+.PHONY : external/exif/src/exif.cpp.s
+
 src/FileObtainer.obj: src/FileObtainer.cpp.obj
 .PHONY : src/FileObtainer.obj
 
@@ -195,6 +219,102 @@ src/FileSorter.s: src/FileSorter.cpp.s
 src/FileSorter.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/FileSorter.cpp.s
 .PHONY : src/FileSorter.cpp.s
+
+src/PathBuilders/JPGBuilder.obj: src/PathBuilders/JPGBuilder.cpp.obj
+.PHONY : src/PathBuilders/JPGBuilder.obj
+
+# target to build an object file
+src/PathBuilders/JPGBuilder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/JPGBuilder.cpp.obj
+.PHONY : src/PathBuilders/JPGBuilder.cpp.obj
+
+src/PathBuilders/JPGBuilder.i: src/PathBuilders/JPGBuilder.cpp.i
+.PHONY : src/PathBuilders/JPGBuilder.i
+
+# target to preprocess a source file
+src/PathBuilders/JPGBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/JPGBuilder.cpp.i
+.PHONY : src/PathBuilders/JPGBuilder.cpp.i
+
+src/PathBuilders/JPGBuilder.s: src/PathBuilders/JPGBuilder.cpp.s
+.PHONY : src/PathBuilders/JPGBuilder.s
+
+# target to generate assembly for a file
+src/PathBuilders/JPGBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/JPGBuilder.cpp.s
+.PHONY : src/PathBuilders/JPGBuilder.cpp.s
+
+src/PathBuilders/PNGBuilder.obj: src/PathBuilders/PNGBuilder.cpp.obj
+.PHONY : src/PathBuilders/PNGBuilder.obj
+
+# target to build an object file
+src/PathBuilders/PNGBuilder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PNGBuilder.cpp.obj
+.PHONY : src/PathBuilders/PNGBuilder.cpp.obj
+
+src/PathBuilders/PNGBuilder.i: src/PathBuilders/PNGBuilder.cpp.i
+.PHONY : src/PathBuilders/PNGBuilder.i
+
+# target to preprocess a source file
+src/PathBuilders/PNGBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PNGBuilder.cpp.i
+.PHONY : src/PathBuilders/PNGBuilder.cpp.i
+
+src/PathBuilders/PNGBuilder.s: src/PathBuilders/PNGBuilder.cpp.s
+.PHONY : src/PathBuilders/PNGBuilder.s
+
+# target to generate assembly for a file
+src/PathBuilders/PNGBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PNGBuilder.cpp.s
+.PHONY : src/PathBuilders/PNGBuilder.cpp.s
+
+src/PathBuilders/PathBuilder.obj: src/PathBuilders/PathBuilder.cpp.obj
+.PHONY : src/PathBuilders/PathBuilder.obj
+
+# target to build an object file
+src/PathBuilders/PathBuilder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PathBuilder.cpp.obj
+.PHONY : src/PathBuilders/PathBuilder.cpp.obj
+
+src/PathBuilders/PathBuilder.i: src/PathBuilders/PathBuilder.cpp.i
+.PHONY : src/PathBuilders/PathBuilder.i
+
+# target to preprocess a source file
+src/PathBuilders/PathBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PathBuilder.cpp.i
+.PHONY : src/PathBuilders/PathBuilder.cpp.i
+
+src/PathBuilders/PathBuilder.s: src/PathBuilders/PathBuilder.cpp.s
+.PHONY : src/PathBuilders/PathBuilder.s
+
+# target to generate assembly for a file
+src/PathBuilders/PathBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/PathBuilder.cpp.s
+.PHONY : src/PathBuilders/PathBuilder.cpp.s
+
+src/PathBuilders/VideoBuilder.obj: src/PathBuilders/VideoBuilder.cpp.obj
+.PHONY : src/PathBuilders/VideoBuilder.obj
+
+# target to build an object file
+src/PathBuilders/VideoBuilder.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/VideoBuilder.cpp.obj
+.PHONY : src/PathBuilders/VideoBuilder.cpp.obj
+
+src/PathBuilders/VideoBuilder.i: src/PathBuilders/VideoBuilder.cpp.i
+.PHONY : src/PathBuilders/VideoBuilder.i
+
+# target to preprocess a source file
+src/PathBuilders/VideoBuilder.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/VideoBuilder.cpp.i
+.PHONY : src/PathBuilders/VideoBuilder.cpp.i
+
+src/PathBuilders/VideoBuilder.s: src/PathBuilders/VideoBuilder.cpp.s
+.PHONY : src/PathBuilders/VideoBuilder.s
+
+# target to generate assembly for a file
+src/PathBuilders/VideoBuilder.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/PathBuilders/VideoBuilder.cpp.s
+.PHONY : src/PathBuilders/VideoBuilder.cpp.s
 
 src/exceptions/DirectoryNotFoundException.obj: src/exceptions/DirectoryNotFoundException.cpp.obj
 .PHONY : src/exceptions/DirectoryNotFoundException.obj
@@ -244,6 +364,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/utilities/Helper.obj: src/utilities/Helper.cpp.obj
+.PHONY : src/utilities/Helper.obj
+
+# target to build an object file
+src/utilities/Helper.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/utilities/Helper.cpp.obj
+.PHONY : src/utilities/Helper.cpp.obj
+
+src/utilities/Helper.i: src/utilities/Helper.cpp.i
+.PHONY : src/utilities/Helper.i
+
+# target to preprocess a source file
+src/utilities/Helper.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/utilities/Helper.cpp.i
+.PHONY : src/utilities/Helper.cpp.i
+
+src/utilities/Helper.s: src/utilities/Helper.cpp.s
+.PHONY : src/utilities/Helper.s
+
+# target to generate assembly for a file
+src/utilities/Helper.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\FileSorter.dir\build.make CMakeFiles/FileSorter.dir/src/utilities/Helper.cpp.s
+.PHONY : src/utilities/Helper.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -255,18 +399,36 @@ help:
 	@echo ... package_source
 	@echo ... rebuild_cache
 	@echo ... FileSorter
+	@echo ... external/exif/src/exif.obj
+	@echo ... external/exif/src/exif.i
+	@echo ... external/exif/src/exif.s
 	@echo ... src/FileObtainer.obj
 	@echo ... src/FileObtainer.i
 	@echo ... src/FileObtainer.s
 	@echo ... src/FileSorter.obj
 	@echo ... src/FileSorter.i
 	@echo ... src/FileSorter.s
+	@echo ... src/PathBuilders/JPGBuilder.obj
+	@echo ... src/PathBuilders/JPGBuilder.i
+	@echo ... src/PathBuilders/JPGBuilder.s
+	@echo ... src/PathBuilders/PNGBuilder.obj
+	@echo ... src/PathBuilders/PNGBuilder.i
+	@echo ... src/PathBuilders/PNGBuilder.s
+	@echo ... src/PathBuilders/PathBuilder.obj
+	@echo ... src/PathBuilders/PathBuilder.i
+	@echo ... src/PathBuilders/PathBuilder.s
+	@echo ... src/PathBuilders/VideoBuilder.obj
+	@echo ... src/PathBuilders/VideoBuilder.i
+	@echo ... src/PathBuilders/VideoBuilder.s
 	@echo ... src/exceptions/DirectoryNotFoundException.obj
 	@echo ... src/exceptions/DirectoryNotFoundException.i
 	@echo ... src/exceptions/DirectoryNotFoundException.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... src/utilities/Helper.obj
+	@echo ... src/utilities/Helper.i
+	@echo ... src/utilities/Helper.s
 .PHONY : help
 
 

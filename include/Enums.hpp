@@ -29,4 +29,11 @@ namespace FileSorterProgram {
         December
     };
 
+    enum class ExtensionMatch {
+        Unknown,
+        PNG,
+        JPG,
+        Video
+    };
+
 }
