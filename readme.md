@@ -1,5 +1,5 @@
 # FileSorter
-## v0.1.0
+![Latest Release](https://img.shields.io/github/v/release/EthenM/FileSorter)
 
 A console app to sort image/video files into folders by creation date.
 
@@ -15,9 +15,16 @@ A console app to sort image/video files into folders by creation date.
 
 ## Initial installation
 
-- Take the contents of the FileSorter zip file, and move them into `%PROGRAM FILES%/EthenM/
-  FileSorter` folder.
-- Double click on the file titled: FileSorterAddRightClick.reg
+> ***NOTE:*** All files can be found and downloaded on the
+    [GitHub repo](https://github.com/EthenM/FileSorter/)
+
+- Move the following files located in the FileSorter zip file into the 
+  `%PROGRAM FILES%/EthenM/FileSorter` folder (will need admin privileges):
+    - `FileSorter.exe`
+    - `FileSorterLogo.ico`
+    - `LICENSE.txt`
+    - the rest is not needed in the folder.
+- Double click on the file titled: addRightMouseClick.reg
     - This will add a new item to the right click menu on folders, allowing you to run the program
       from the right click menu.
 - search and open the "Edit the system environment variables" app
