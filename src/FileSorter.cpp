@@ -217,9 +217,6 @@ namespace FileSorterProgram {
         int userInput;
         std::cin >> userInput;
 
-        //ignore all erroneous data up to the next new line.
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-
         TransferType transferType = static_cast<TransferType>(userInput);
 
         //if the user enters invalid input (e.g. 'a'), then the std::cin above will fail.
