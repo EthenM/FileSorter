@@ -26,5 +26,9 @@ int main(int argc, char* argv[]) {
     FileSorterProgram::FileSorter fs { std::string(argv[1]) };
     int success { fs.run() };
 
+    //ensure the program doesn't close on the user.
+    std::cout << "\n\nPress enter to continue..." << std::endl;
+    std::cin.ignore();
+
     return success;
 }
