@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\FileSorter]
+"Icon"="\"C:\\Program Files\\EthenM\\FileSorter\\FileSorterLogo.ico\""
+@="Sort Files"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\FileSorter\command]
+@="\"C:\\Program Files\\EthenM\\FileSorter\\FileSorter.exe\" ."
+
+[HKEY_CLASSES_ROOT\Directory\shell\FileSorter]
+"Icon"="\"C:\\Program Files\\EthenM\\FileSorter\\FileSorterLogo.ico\""
+@="Sort Files"
+
+[HKEY_CLASSES_ROOT\Directory\shell\FileSorter\command]
+@="\"C:\\Program Files\\EthenM\\FileSorter\\FileSorter.exe\" \"%1\""
