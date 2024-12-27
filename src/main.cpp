@@ -27,8 +27,8 @@ int main(int argc, char* argv[]) {
     int success { fs.run() };
 
     //ensure the program doesn't close on the user.
-    std::cout << "\n\nPress enter to continue..." << std::endl;
-    std::cin.ignore();
+    std::cout << "\n\nPress enter to continue...";
+    std::cin.ignore().get();
 
     return success;
 }
