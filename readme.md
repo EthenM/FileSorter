@@ -57,6 +57,9 @@ A console app to sort image/video files into folders by creation date.
 - When selecting the sort type, the files will always be split into folders by years. Selecting the
   Months option will optionally store the files within `<SORTED FOLDER>/<YEAR>/<MONTH>/`.
 - When selecting options from a menu, enter the ***NUMBER*** of the option wanted.
+    - If a number is inputted into the option enter place, followed by text, as long as the number
+      is in the menu, the option will be good. (**2**jfkdla => option 2 is chosen). Any other
+      combination will fail (fjdkls2, 123fjdkas, fdsa, a, 789, -2, etc.).
 - It is advised to use the "Copy" transfer option. this will use more space on the drive, but allows
   you to double check that the program executed successfully, and that all files made it.
   Moving files always runs the risk of corruption, or an unintentional move, leading to unexpected

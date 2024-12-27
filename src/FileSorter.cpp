@@ -1,3 +1,4 @@
+#define NOMINMAX //stops the limits max function from colliding with the max macro
 
 #include "../include/FileSorter.hpp"
 #include "../include/FileObtainer.hpp"
@@ -9,6 +10,7 @@
 #include "../include/PathBuilders/PNGBuilder.hpp"
 #include "exceptions/DirectoryNotFoundException.cpp"
 #include <iostream>
+#include <limits>
 #include <vector>
 #include <tuple>
 #include <string>
@@ -131,7 +133,7 @@ namespace FileSorterProgram {
         
         //loop the question until the input is valid
         while (sortType == SortType::Unknown) {
-            std::cout << "Sort type chosen was invalid. please try again.\n" << std::endl;
+            std::cout << "\nSort type chosen was invalid. please try again.\n" << std::endl;
 
             //display the sort menu to the user
             displaySortTypeMenu();
@@ -147,7 +149,7 @@ namespace FileSorterProgram {
     void FileSorter::displaySortTypeMenu() {
         std::cout << "How would you like the files to be sorted (placed in folders by):\n"
             << "1: Years\n"
-            << "2: Months\n"
+            << "2: Years & Months\n"
             << "Input the number for the desired sort type above and hit enter: ";
     }
 
@@ -156,6 +158,17 @@ namespace FileSorterProgram {
         std::cin >> userInput;
 
         SortType sortType = static_cast<SortType>(userInput);
+
+        //if the user enters invalid input (e.g. 'a'), then the std::cin above will fail.
+        //reset the stream, so the program can function normally.
+        if (std::cin.fail()) {
+            std::cin.clear();
+            //ignore all erroneous data up to the next new line.
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else {
+            //ignore all erroneous data up to the next new line.
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         switch (sortType) {
         case SortType::Year:
@@ -180,7 +193,7 @@ namespace FileSorterProgram {
         
         //loop the question until the input is valid
         while (transferType == TransferType::Unknown) {
-            std::cout << "Transfer type chosen was invalid. please try again.\n" << std::endl;
+            std::cout << "\nTransfer type chosen was invalid. please try again.\n" << std::endl;
 
             //display the sort menu to the user
             displayTransferTypeMenu();
@@ -204,7 +217,21 @@ namespace FileSorterProgram {
         int userInput;
         std::cin >> userInput;
 
+        //ignore all erroneous data up to the next new line.
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
         TransferType transferType = static_cast<TransferType>(userInput);
+
+        //if the user enters invalid input (e.g. 'a'), then the std::cin above will fail.
+        //reset the stream, so the program can function normally.
+        if (std::cin.fail()) {
+            std::cin.clear();
+            //ignore all erroneous data up to the next new line.
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        } else {
+            //ignore all erroneous data up to the next new line.
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
 
         switch (transferType) {
         case TransferType::Move:
